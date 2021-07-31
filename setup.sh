@@ -1,6 +1,7 @@
 apt -y update
 apt -y install sudo
 apt -y install git
+apt -y install dig
 git clone https://github.com/hashcat/hashcat.git
 cd hashcat
 make
@@ -33,3 +34,5 @@ service apache2 restart
 cd /var/www/html
 wget https://gratispentest.nl/wordlist/hashcat.txt
 mv hashcat.txt hashcat.php
+myip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
+echo "My Hashcat API address is: ${myip}" . "/hashcat.php"
