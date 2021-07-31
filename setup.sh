@@ -1,4 +1,5 @@
 apt -y update
+apt -y install sudo
 apt -y install git
 git clone https://github.com/hashcat/hashcat.git
 cd hashcat
@@ -20,6 +21,10 @@ ufw allow 443
 ufw allow http
 ufw allow https
 ufw allow in "Apache Full"
+sudo iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A OUTPUT -p tcp --sport 80 -m conntrack --ctstate ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A OUTPUT -p tcp --sport 443 -m conntrack --ctstate ESTABLISHED -j ACCEPT
 apt -y install curl
 apt -y install php libapache2-mod-php php-mcrypt php-mysql
 apt -y install systemctl
