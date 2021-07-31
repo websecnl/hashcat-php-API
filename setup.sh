@@ -3,6 +3,7 @@ apt -y install git
 git clone https://github.com/hashcat/hashcat.git
 cd hashcat
 make
+echo "export PATH=\$PATH:$(pwd)" >> ~/.bashrc
 apt install -y nvidia-opencl-dev
 apt -y install wget
 cd rules
