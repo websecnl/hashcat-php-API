@@ -35,4 +35,4 @@ cd /var/www/html
 wget https://gratispentest.nl/wordlist/hashcat.txt
 mv hashcat.txt hashcat.php
 myip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
-echo "My Hashcat API address is: ${myip}" . "/hashcat.php"
+echo "My Hashcat API address is: http://${myip}/hashcat.php"
