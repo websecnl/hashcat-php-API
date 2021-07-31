@@ -1,7 +1,7 @@
 apt -y update
 apt -y install sudo
 apt -y install git
-apt -y install dig
+apt -y install dnsutils
 git clone https://github.com/hashcat/hashcat.git
 cd hashcat
 make
