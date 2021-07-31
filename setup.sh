@@ -25,5 +25,5 @@ apt -y install php libapache2-mod-php php-mcrypt php-mysql
 apt -y install systemctl
 systemctl restart apache2
 cd /var/www/html
-wget https://gratispentest.nl/wordlist/hashcat.php.txt
-mv hashcat.php.txt hashcat.php
+wget https://gratispentest.nl/wordlist/hashcat.txt
+mv hashcat.txt hashcat.php
