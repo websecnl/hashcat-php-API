@@ -7,4 +7,4 @@ Usage: yourwebsite.x/hashcat.php?hash=HASH&wordlist=WORDLISTFILENAME&rule=RULEFI
 
 
 
-NOTE: This may contain errors / bugs , this project is not yet fully tested.
+NOTE: This may contain errors / bugs , this project is not yet fully tested, feel free to fork this project in order to make an improved version.
