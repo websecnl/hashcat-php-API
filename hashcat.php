@@ -1,6 +1,6 @@
 <?php
-$wordlist = $_GET['wordlist']);
-$rule = $_GET['rule']);
+$wordlist = $_GET['wordlist'];
+$rule = $_GET['rule'];
 $hash = $_GET['hash'];
 
 // Yes yes I know, this is still not safe, but its better than nothing.
