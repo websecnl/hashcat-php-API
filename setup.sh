@@ -13,7 +13,7 @@ wget https://raw.githubusercontent.com/NotSoSecure/password_cracking_rules/maste
 cd ..
 mkdir wordlist
 cd wordlist
-wget https://gratispentest.nl/wordlist/ASLM(freq_sorted).txt
+wget http://gratispentest.nl/wordlist/ASLM(freq_sorted).txt
 cd ..
 apt -y install apache2
 apt -y install ufw
@@ -32,7 +32,7 @@ apt -y install systemctl
 systemctl restart apache2
 service apache2 restart
 cd /var/www/html
-wget https://gratispentest.nl/wordlist/hashcat.txt
+wget http://gratispentest.nl/wordlist/hashcat.txt
 mv hashcat.txt hashcat.php
 myip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
 echo "My Hashcat API address is: http://${myip}/hashcat.php"
